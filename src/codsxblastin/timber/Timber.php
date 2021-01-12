@@ -49,7 +49,7 @@ class Timber extends PluginBase implements Listener {
                 if ($block->getId() !== Block::WOOD && $side->getId() !== Block::WOOD2) {
                     continue;
                 }
-            $player->getLevel()->useBreakOn($side, $item, $player);
+            $player->getLevel()->useBreakOn($side, $itemHand, $player);
             $mined++;
             $this->startTimber($side, $player, $mined);
         }
