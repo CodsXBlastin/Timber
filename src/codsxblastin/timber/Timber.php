@@ -41,6 +41,7 @@ class Timber extends PluginBase implements Listener {
 
     public function startTimber(Block $block, Player $player, int $mined = 0): void
     {
+        $itemHand = $player->getInventory()->getItemInHand();
         for ($i = 0; $i <= 5; $i++) {
             if ($mined > 800) {
                 break;
@@ -49,7 +50,7 @@ class Timber extends PluginBase implements Listener {
                 if ($block->getId() !== Block::WOOD && $side->getId() !== Block::WOOD2) {
                     continue;
                 }
-            $player->getLevel()->useBreakOn($side, $item, $player);
+            $player->getLevel()->useBreakOn($side, $itemHand, $player);
             $mined++;
             $this->startTimber($side, $player, $mined);
         }
