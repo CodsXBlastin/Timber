@@ -1,5 +1,5 @@
 name: Timber
-main: codsxblastin\timber
-version: 20.1.5
+main: codsxblastin\timber\Timber
+version: 20.1.6
 api: 3.0.0
 description: A Timber Plugin
